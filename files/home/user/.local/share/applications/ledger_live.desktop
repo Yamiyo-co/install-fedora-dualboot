@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1
-Name=Ledger Live
-Exec=sh -c "$HOME/applications/ledger/ledger-live"
-Icon=ledger_live
-Terminal=false
-Type=Application
-StartupNotify=true
-Categories=Utility;

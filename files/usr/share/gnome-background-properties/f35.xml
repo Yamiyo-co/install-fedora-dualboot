@@ -11,8 +11,8 @@
     <scolor>#000000</scolor>
   </wallpaper>
   <wallpaper deleted="false">
-        <name>Fedora 35 Time of Day</name>
-        <filename>/usr/share/backgrounds/custom/f39/f39.xml</filename>
-        <options>zoom</options>
-    </wallpaper>
+    <name>Fedora 35 Time of Day</name>
+    <filename>/usr/share/backgrounds/custom/f35/f35.xml</filename>
+    <options>zoom</options>
+  </wallpaper>
 </wallpapers>

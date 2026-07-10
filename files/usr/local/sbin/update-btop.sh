@@ -11,12 +11,12 @@ then
     exit 1
 fi
 
-btop_url="https://github.com/aristocratos/btop/releases/latest/download/btop-x86_64-linux-musl.tbz"
+btop_url="https://github.com/aristocratos/btop/releases/latest/download/btop-x86_64-unknown-linux-musl.tar.gz"
 
 if [ $# -eq 1 ]
 then
     btop_version=$1
-    btop_url="https://github.com/aristocratos/btop/releases/download/v${btop_version}/btop-x86_64-linux-musl.tbz"
+    btop_url="https://github.com/aristocratos/btop/releases/download/v${btop_version}/btop-x86_64-unknown-linux-musl.tar.gz"
 fi
 
 mkdir --parents "/tmp/btop/"

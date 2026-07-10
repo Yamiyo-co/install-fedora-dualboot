@@ -29,7 +29,7 @@ print-help() {
     echo ""
     echo -e "${green}[EXIT CODES]${reset}"
     echo "    0    : Success"
-    echo "    1    : Unknown argument"
+    echo "    1    : Unknown or no argument"
     echo "    2    : Error while pushd to or popd from the script parent directory"
     echo "    3    : Error while popd from an app directory"
     echo ""
@@ -89,9 +89,9 @@ configure-app() {
     } >> "${log_file}"
     echo -n "[ ${app_uppercase}... "
 
-    if try-pushd "${app}"
+    if ! ${check_dir} || check-directory "${app}" "${dir_to_check}"
     then
-        if ! ${check_dir} || check-directory "${app}" "${dir_to_check}"
+        if try-pushd "${app}"
         then
             "configure-${app}"
             if popd &>> "${log_file}"
@@ -121,6 +121,12 @@ then
     exit 2
 fi
 
+if [ $# -eq 0 ]
+then
+    print-help
+    exit 1
+fi
+
 # Handle options
 for opt in "$@"
 do
@@ -142,6 +148,7 @@ do
     # Add your options here
     *)
         echo -e "${red}Unknown argument : ${opt}${reset}" >&2
+        print-help
         exit 1
         ;;
     esac
