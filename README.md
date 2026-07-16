@@ -30,7 +30,7 @@ The project is used on my laptop. Here are its specifications:
 ```text
 install-fedora/
 |
-+-- configure                => Configuration script template to allow the user to automate their account configuration
++-- configure/               => Configuration script template to allow the user to automate their account configuration
 +-- files/                   => Files used throughout the post installation process
 |
 +-- .gitignore               => Files ignored from Git
