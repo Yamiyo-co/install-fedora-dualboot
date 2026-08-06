@@ -174,8 +174,8 @@ systemInstall() {
     unset extension_urls
     declare -A extension_urls
     extension_urls+=(
-        ["middleclickclose@paolo.tranquilli.gmail.com"]="https://extensions.gnome.org/extension-data/middleclickclosepaolo.tranquilli.gmail.com.v35.shell-extension.zip"
-        ["nightthemeswitcher@romainvigier.fr"]="https://extensions.gnome.org/extension-data/nightthemeswitcherromainvigier.fr.v80.shell-extension.zip"
+        ["middleclickclose@paolo.tranquilli.gmail.com"]="https://extensions.gnome.org/extension-data/middleclickclosepaolo.tranquilli.gmail.com.v36.shell-extension.zip"
+        ["nightthemeswitcher@romainvigier.fr"]="https://extensions.gnome.org/extension-data/nightthemeswitcherromainvigier.fr.v83.shell-extension.zip"
     )
 
     for extension_uuid in "${!extension_urls[@]}"
